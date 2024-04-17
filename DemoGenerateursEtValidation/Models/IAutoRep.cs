@@ -3,15 +3,15 @@
     public interface IAutoRep
     {
         //Collection d'autos
-        IEnumerable<Auto> MesAuto { get; }
+        public List<Auto> MesAuto { get; }
 
         //Méthodes CURD
-        Auto GetAuto(int? id);
+        public Auto GetAuto(int? id);
 
-        void AddAuto(Auto auto);
+        public void AddAuto(Auto auto);
 
-        void SupprimerAuto(int id);
+        public void SupprimerAuto(int? id);
 
-        void ModifierAuto(Auto auto);
+        public void ModifierAuto(Auto auto);
     }
 }

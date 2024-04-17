@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace DemoGenerateursEtValidation.Models
 {
@@ -21,9 +22,8 @@ namespace DemoGenerateursEtValidation.Models
 
         public Auto() { }
 
-        public Auto(int id, string marque, string model, double prix)
+        public Auto(string marque, string model, double prix)
         {
-            Id = id;
             Marque = marque;
             Model = model;
             Prix = prix;
