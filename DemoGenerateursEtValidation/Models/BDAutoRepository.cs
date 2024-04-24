@@ -19,6 +19,8 @@ namespace DemoGenerateursEtValidation.Models
             }
         }
 
+        public IQueryable<Auto> AutoRep => throw new NotImplementedException();
+
         public Auto GetAuto(int? id)
         {
             return _catalogueAutoDbContext.Autos.FirstOrDefault(x => x.Id == id);

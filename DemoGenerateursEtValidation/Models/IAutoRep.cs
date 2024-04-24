@@ -5,6 +5,8 @@
         //Collection d'autos
         public List<Auto> MesAuto { get; }
 
+        public IQueryable<Auto> AutoRep { get; }
+
         //Méthodes CURD
         public Auto GetAuto(int? id);
 

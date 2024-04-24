@@ -13,9 +13,10 @@ namespace DemoGenerateursEtValidation.Controllers
             this.collectionAutos = collectionAutos; // Initialiser la liste d'auto
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int? pageNumber)
         {
-            return View("Liste", this.collectionAutos.MesAuto); //Afficher la liste d'auto
+            int pageSize = 10;
+            return View(await PaginatedList<Auto>.CreateAsync((IQueryable<Auto>)this.collectionAutos.MesAuto, pageNumber ?? 1, pageSize));
         }
 
         public IActionResult Create()
